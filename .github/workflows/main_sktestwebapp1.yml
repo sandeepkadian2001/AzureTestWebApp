@@ -24,10 +24,11 @@ jobs:
         
       - name: Install dependencies
         run: dotnet restore
-        working-directory: ../AzureWebApp/
+        working-directory: AzureWebApp
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
+        working-directory: AzureWebApp
 
       - name: dotnet publish
         run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
