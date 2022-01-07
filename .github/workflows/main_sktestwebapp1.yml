@@ -24,7 +24,7 @@ jobs:
         
       - name: Install dependencies
         run: dotnet restore
-        working-directory: AzureWebApp
+        working-directory: AzureTestWebApp/AzureWebApp
 
       - name: Build with dotnet
         run: dotnet build --configuration Release
